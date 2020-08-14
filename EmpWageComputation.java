@@ -95,7 +95,7 @@ public class EmpWageComputation
 
 
 //Use Case 4 (Solving Using Switch Case)
-
+/*
 public class EmpWageComputation
 {
     public static final int IS_FULL_TIME = 1;
@@ -126,5 +126,58 @@ public class EmpWageComputation
         empWage = EMP_RATE_PER_HR * empHrs;
 
         System.out.println("Employee's Daily Wage: " + empWage);
+    }
+}
+*/
+
+
+
+
+
+
+
+
+//Use Case 5 (Calculating Wages for a Month)
+
+public class EmpWageComputation
+{
+    public static final int IS_FULL_TIME = 1;
+    public static final int IS_PART_TIME = 2;
+    public static final int EMP_RATE_PER_HR = 20;
+    public static final int NUMBER_OF_WORKING_DAYS=20;
+
+    public static void main(String[] args)
+    {
+        int empHrs = 0;
+        int EmpDailyWage;
+        int EmpTotalWage = 0;
+        int totalWorkingDays=0;
+
+        while(totalWorkingDays < NUMBER_OF_WORKING_DAYS)
+        {
+            totalWorkingDays = totalWorkingDays + 1;
+
+            int empCheck=(int)(Math.floor(Math.random()*10)%3);
+
+            switch(empCheck)
+            {
+                case IS_FULL_TIME:
+                {
+                    empHrs=8;
+                    break;
+                }
+                case IS_PART_TIME:
+                {
+                    empHrs=4;
+                    break;
+                }
+            }
+
+            EmpDailyWage = EMP_RATE_PER_HR * empHrs;
+            EmpTotalWage = EmpTotalWage + EmpDailyWage;
+
+            System.out.println("Employee's Daily Wage for Day " + totalWorkingDays + ": " + EmpDailyWage);
+        }
+        System.out.println("Employee's Total Daily Wage for Month: " + EmpTotalWage);
     }
 }
