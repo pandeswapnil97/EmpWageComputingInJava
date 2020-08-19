@@ -1,5 +1,6 @@
 // Use Case 8 (Computing Employee Wage for multiple companies) (Day 22)
 
+
 public class EmpWageComputation_Day22
 {
         public static final int IS_FULL_TIME = 1;
