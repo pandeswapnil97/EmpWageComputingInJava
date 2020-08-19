@@ -1,5 +1,6 @@
 //Use Case 7 (Refactoring the code to write a class method to compute Employee Wage) (Day21)
 
+
 public class EmpWageComputation_Day21
 {
 	public static final int IS_FULL_TIME = 1;
