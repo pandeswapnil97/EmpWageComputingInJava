@@ -1,6 +1,5 @@
 //Use Case 1 (Checking whether Employee is present or not)
 
-
 public class EmpWageComputation
 {
 	public static void main(String[] args)
