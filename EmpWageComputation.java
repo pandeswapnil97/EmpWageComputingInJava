@@ -1,29 +1,32 @@
-//Use Case 3 (Adding Part Time Employee and Wage)
+//Use Case 4 (Solving Using Switch Case)
 
-public class EmpWageComputation 
+public class EmpWageComputation
 {
+    public static final int IS_FULL_TIME = 1;
+    public static final int IS_PART_TIME = 2;
+    public static final int EMP_RATE_PER_HR = 20;
+    
     public static void main(String[] args)
     {
-        int IS_FULL_TIME = 1;
-        int IS_PART_TIME = 2;
-        int empRatePerHr = 20;
-        
         int empHrs = 0;
         int empWage;
-        
         int empCheck = (int)(Math.floor(Math.random()*10)%3);
         
-	if(IS_FULL_TIME == empCheck)
+	switch(empCheck)
         {
-            empHrs = 8;
+            case IS_FULL_TIME:
+            {
+                empHrs = 8;
+                break;
+            }
+            case IS_PART_TIME:
+            {
+                empHrs = 4;
+                break;
+            }
         }
-        else if (IS_PART_TIME == empCheck)
-        {
-            empHrs = 4;
-        }
-        
-        empWage = empRatePerHr * empHrs;
-        
+
+        empWage = EMP_RATE_PER_HR * empHrs;
         System.out.println("Employee's Daily Wage: " + empWage);
     }
 }
